@@ -1,0 +1,68 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "plugin:@next/next/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["import", "simple-import-sort", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "no-console": 2,
+
+    "import/first": "error",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "error",
+
+    "simple-import-sort/exports": "warn",
+
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^(next|react)"],
+          ["^"],
+          ["^public"],
+          ["^(store|reducers)"],
+          ["^hooks"],
+          ["^components"],
+          ["^ui-kit"],
+          ["^data"],
+          ["^constants"],
+          ["^utils"],
+          ["^types"],
+          ["^\\."],
+          ["\\.css$", "\\.scss$"],
+        ],
+      },
+    ],
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["node_modules/"]
+}

@@ -1,0 +1,6 @@
+next.config.js
+.babel.config.js
+sentry.client.config.js
+sentry.server.config.js
+sentry.common.config.js
+_error.js
