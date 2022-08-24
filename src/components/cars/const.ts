@@ -1,4 +1,4 @@
-import { Data } from './type';
+import { CarsInformation } from './type';
 
 export const colors = [
   '#0C4ABE',
@@ -9,21 +9,16 @@ export const colors = [
   '#9A9A81',
 ];
 
-export const allCoordinates = 900;
+export const raceWidth = 450;
 
-export const startWidth = 500;
+export const zoomWidths = {
+  min: Math.round(raceWidth * 0.6),
+  max: Math.round(raceWidth * 0.8),
+};
 
 export const widthCar = 50;
 
 export const startWidthZoom = 200;
-
-export interface CarInformation {
-  process: number;
-}
-
-export type CarsInformation = {
-  [k in string]: CarInformation;
-};
 
 export const carsInitialInformation: CarsInformation = {
   car_1: {
@@ -44,13 +39,4 @@ export const carsInitialInformation: CarsInformation = {
   car_6: {
     process: 0,
   },
-};
-
-export const TEST_DATA: Data = {
-  rng_id: 1,
-  game_id: 42,
-  event_id: 3,
-  kind: 'car_progress',
-  line: 2,
-  progress: 400,
 };
