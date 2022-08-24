@@ -7,7 +7,7 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Lending</title>
+        <title>Гонки машинок</title>
       </Head>
 
       <Cars />
